@@ -21,6 +21,8 @@ The technical report is the best place to start for an in depth view of the enti
 
 ### In the Code folder the user will find:
 
-1. DDL.pdf - The data definition language that we used to create the relational SQL database
-2. Machine Learning.ipynb - Training and optimization of the machine learning model, as well as a block that exports the model as a .model file into the current user directory.
-3. School-finances-consumer.ipynb - 
+1. **DDL.pdf** - The data definition language that we used to create the relational SQL database
+2. **Machine Learning.ipynb** - Training and optimization of the machine learning model, as well as a block that exports the model as a .model file into the current user directory.
+3. **School-finances-data-final.ipynb** - A jupyter notebook style databrick containing all of the data cleaning for the datasets
+4. **School-finances-producer.ipynb** - A kafka producer databrick that creates a "school-finances" topic and sends one message per row of the census dataset to the school-finances topic
+5. **School-finances-consumer.ipynb** - A kafka consumer databrick that consumes all of the census data messages from the school-finances topic, and compiles it into a dataframe, and writes that along with the other two cleaned datasets to the SQL server.
